@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  minDate: Date;
+  maxDate: Date;
 
-  constructor() { }
+  constructor() { 
+    this.setDateConstraints();
+  }
 
   ngOnInit(): void {
   }
+  
+
+    setDateConstraints(): void {
+      const currentYear = new Date().getFullYear();
+      this.minDate = new Date(currentYear - 20, 0, 1);
+      this.maxDate = new Date(currentYear + 10, 11, 31);
+    }
 
 }

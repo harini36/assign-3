@@ -1,14 +1,18 @@
 <div class="rectangle">
-    <div class="toolbar">
-        <img class="logo" src='\assets\Robosoft_logo_horizontal.png' alt="Robosoft_logo">
-        <div class="container">
-            <p class="login">Login</p>
-            <input class="username" type="text" placeholder="Enter Username">
-            <input class="password" type="password" placeholder="Enter Password"><br>
-            <button class="submit" type="submit">Login</button>
-            <p class="forgot-password">Forgot Password?</p>
-        </div>
-
-
+  <div class="toolbar">
+    <img class="logo" src='\assets\Robosoft_logo_horizontal.png' alt="Robosoft_logo">
+    <div class="container">
+      <p class="login">Login</p>
+      <mat-form-field appearance="outline" class="username">
+        <mat-label>Enter Username</mat-label>
+        <input matInput>
+      </mat-form-field><br>
+      <mat-form-field appearance="outline" class="password">
+        <mat-label>Enter Password</mat-label>
+        <input matInput type="password">
+      </mat-form-field>
+      <button routerLink="/home" class="submit" type="submit">Login</button>
+      <p  routerLink="/forgotpassword" class="forgot-password" >Forgot Password?</p>
     </div>
+  </div>
 </div>

@@ -1,12 +1,20 @@
+<div class="toolbar">
+    <img class="logo" src='\assets\Robosoft_logo_horizontal.png' alt="Robosoft_logo">
+    <p class="text">Jane Doe</p>
+    <div class="space"></div>
+    <img class="profile " src='\assets\profile.png' alt='jane_doe'>
+</div>
+
 <div class="float-container">
     <div class="container">
         <h1>Your Questionnaires</h1>
         <button class="button_questionnair" type="submit">New Questionnaire</button>
         <button class="button_secure_codding" type="submit">Secure coding Guidelines</button>
-        <p>ISMS Questionnaire <img class="arrow_ISMS" src="\assets\ic_arrow_forward.png" alt=""> </p>
-        <p>PA Questionnaire <img class="arrow_PA" src="\assets\ic_arrow_forward.png" alt=""></p>
-        <p>Process Guidelines <img class="arrow_process" src="\assets\ic_arrow_forward.png" alt=""></p>
+        <p class="txt">ISMS Questionnaire <img class="arrow_ISMS" src="\assets\ic_arrow_forward.png" alt=""> </p>
+        <p class="txt">PA Questionnaire <img class="arrow_PA" src="\assets\ic_arrow_forward.png" alt=""></p>
+        <p class="txt">Process Guidelines <img class="arrow_process" src="\assets\ic_arrow_forward.png" alt=""></p>
     </div>
+
     <div class="container_main">
 
         <div class="form">
@@ -17,12 +25,12 @@
                 <legend> Enter Title</legend>
                 <input class="input_text " value="Secure coding Guidelines">
             </fieldset>
+            
             <p class="hint">Please enter appropriate title</p>
 
             <fieldset class="description">
                 <legend> Description </legend>
-                <input class="input_text"
-                    value="These Guidelines Helps you to code in a secure manor which would assist in keeping the product data safe">
+                <input class="description_text" value="These Guidelines Helps you to code in a secure manor which would assist in keeping the product data safe">
             </fieldset>
 
             <div>
@@ -42,10 +50,31 @@
                 <legend> check box text</legend>
                 <input class="input_text " value="I had the red guidelines">
             </fieldset>
+            <p class="additional_details">Additional Details</p>
 
+          
+            <div>
+                <fieldset class="button_title">
+                    <legend> Select content PPT File</legend>
+                    <input class="input_text" value="secure coding.ppt">
+                </fieldset>
+
+
+                <fieldset class="button_text">
+                    <legend>select participant XL sheet</legend>
+                    <input class="input_text" value="participant.xls">
+                </fieldset>
+
+            </div>
+            <fieldset class="description">
+                <legend> Mail </legend>
+                <input class="description_text" value="These Guidelines Helps you to code in a secure manor which would assist in keeping the product data safe">
+            </fieldset>
+
+           
         </div>
         <div class="options">
-            <div class="vl"></div>
+            <div class="vertical-line"></div>
             <button class="button_save" type="button">
                 <mat-icon aria-hidden="false">save</mat-icon>SAVE
             </button><br>
@@ -62,11 +91,8 @@
                 <mat-icon aria-hidden="false">generate report</mat-icon>GENERATE REPORT
             </button><br>
 
-
-
         </div>
-        <button class="botton_add" type="button">
-            <mat-icon aria-hidden="false">add</mat-icon>
-        </button>
+       <button type="menu" class="button_add"> <mat-icon aria-hidden="false">add</mat-icon>
+       </button>
     </div>
 </div>

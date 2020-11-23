@@ -34,18 +34,19 @@
   width: 535px;
   border-radius: 20px;
   background-color: #FFFFFF;
-  margin-top: 1100px;
-  margin-left: 75px;
+  margin-top: 700px;
+  margin-left: 65px;
 
 }
 
 .login {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: inter Medium;
   font-size: 24px;
   line-height: 29px;
   color: #000000;
   margin-left: 230px;
   margin-top: 40px;
+
 }
 
 .username {
@@ -61,7 +62,6 @@
   border-width: 1px;
   color: rgba(0, 0, 0, 0.6);
   font-family: Roboto;
-
   letter-spacing: 0.15px;
   line-height: 24px;
 
@@ -85,7 +85,6 @@
   line-height: 24px;
 
 
-
 }
 
 .submit {
@@ -95,7 +94,7 @@
   background-color: #D92756;
   border: none;
   border-radius: 30px;
-  margin-top: 30px;
+  margin-top: 35px;
   margin-left: 195px;
   color: #FFFFFF;
   font-size: 14px;
@@ -103,6 +102,7 @@
   letter-spacing: 1.25px;
   line-height: 16px;
   text-align: center;
+  font-family: Roboto;
 }
 
 .forgot-password {
@@ -115,4 +115,6 @@
   letter-spacing: 0;
   line-height: 14px;
   margin-left: 225px;
+  margin-top: 10px;
+
 }
