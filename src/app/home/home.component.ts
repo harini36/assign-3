@@ -6,21 +6,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  minDate: Date;
-  maxDate: Date;
 
-  constructor() { 
-    this.setDateConstraints();
-  }
-
-  ngOnInit(): void {
-  }
+  
   
 
-    setDateConstraints(): void {
-      const currentYear = new Date().getFullYear();
-      this.minDate = new Date(currentYear - 20, 0, 1);
-      this.maxDate = new Date(currentYear + 10, 11, 31);
-    }
+  constructor() { };
 
+  ngOnInit(): void {};
+  
+  options():void {
+    document.getElementById('home_page').style.zIndex = "1";
+    document.getElementById('options').style.zIndex = "5";
+  }
+
+  superAdmin(): void
+  {
+    document.getElementById('home_page').style.zIndex = "1";
+    document.getElementById('screen').style.zIndex = "3";
+    document.getElementById('options').style.zIndex = "-5";
+    document.getElementById('superAdmin').style.zIndex = "5";
+    document.getElementById('admin').style.zIndex = "-5";
+  }
+ 
+  admin(): void
+  {
+    document.getElementById('home_page').style.zIndex = "1";
+    document.getElementById('screen').style.zIndex = "3";
+    document.getElementById('options').style.zIndex = "-5";
+    document.getElementById('superAdmin').style.zIndex = "-5";
+    document.getElementById('admin').style.zIndex = "5";
+  }
 }

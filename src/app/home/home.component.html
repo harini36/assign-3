@@ -1,98 +1,240 @@
-<div class="toolbar">
-    <img class="logo" src='\assets\Robosoft_logo_horizontal.png' alt="Robosoft_logo">
-    <p class="text">Jane Doe</p>
-    <div class="space"></div>
-    <img class="profile " src='\assets\profile.png' alt='jane_doe'>
-</div>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 
-<div class="float-container">
-    <div class="container">
-        <h1>Your Questionnaires</h1>
-        <button class="button_questionnair" type="submit">New Questionnaire</button>
-        <button class="button_secure_codding" type="submit">Secure coding Guidelines</button>
-        <p class="txt">ISMS Questionnaire <img class="arrow_ISMS" src="\assets\ic_arrow_forward.png" alt=""> </p>
-        <p class="txt">PA Questionnaire <img class="arrow_PA" src="\assets\ic_arrow_forward.png" alt=""></p>
-        <p class="txt">Process Guidelines <img class="arrow_process" src="\assets\ic_arrow_forward.png" alt=""></p>
+
+<div class="home_page" id="home_page">
+    <div class="toolbar">
+        <img class="logo" src='\assets\Robosoft_logo_horizontal.png' alt="Robosoft_logo">
+        <p class="text">Jane Doe</p>
+        <div class="space"></div>
+        <img class="profile " src='\assets\profile.png' alt='jane_doe'>
     </div>
 
-    <div class="container_main">
+    <div class="float-container">
+        <div class="container">
+            <h1>Your Questionnaires</h1>
+            <button class="button_questionnair" type="submit">New Questionnaire</button>
+            <button class="button_secure_codding" type="submit">Secure coding Guidelines</button>
+            <p class="txt">ISMS Questionnaire <img class="arrow_ISMS" src="\assets\ic_arrow_forward.png" alt=""> </p>
+            <p class="txt">PA Questionnaire <img class="arrow_PA" src="\assets\ic_arrow_forward.png" alt=""></p>
+            <p class="txt">Process Guidelines <img class="arrow_process" src="\assets\ic_arrow_forward.png" alt=""></p>
+        </div>
 
-        <div class="form">
+        <div class="container_main">
 
-            <p class="questionnaire">Questionnaire</p>
+            <div class="form">
 
-            <fieldset class="enter_title">
-                <legend> Enter Title</legend>
-                <input class="input_text " value="Secure coding Guidelines">
-            </fieldset>
-            
-            <p class="hint">Please enter appropriate title</p>
+                <p class="questionnaire">Questionnaire</p>
 
-            <fieldset class="description">
-                <legend> Description </legend>
-                <input class="description_text" value="These Guidelines Helps you to code in a secure manor which would assist in keeping the product data safe">
-            </fieldset>
 
-            <div>
-                <fieldset class="button_title">
-                    <legend> Button Title</legend>
-                    <input class="input_text" value="I Accept">
+                <fieldset class="enter_title">
+                    <legend> Enter Title</legend>
+                    <input class="input_text " value="Secure coding Guidelines">
                 </fieldset>
 
+                <p class="hint">Please enter appropriate title</p>
 
-                <fieldset class="button_text">
-                    <legend>Button Text</legend>
-                    <input class="input_text" value="I have the red guidelines">
+                <fieldset class="description">
+                    <legend> Description </legend>
+                    <input class="description_text"
+                        value="These Guidelines Helps you to code in a secure manor which would assist in keeping the product data safe">
                 </fieldset>
+
+                <div>
+                    <fieldset class="button_title">
+                        <legend> Button Title</legend>
+                        <input class="input_text" value="I Accept">
+                    </fieldset>
+
+
+                    <fieldset class="button_text">
+                        <legend>Button Text</legend>
+                        <input class="input_text" value="I have the red guidelines">
+                    </fieldset>
+
+                </div>
+                <fieldset class="check_box_text">
+                    <legend> check box text</legend>
+                    <input class="input_text " value="I had the red guidelines">
+                </fieldset>
+                <p class="additional_details">Additional Details</p>
+                <div>
+                    <fieldset class="button_date">
+                        <legend> Select start date</legend>
+                        <input class="input_date" value="17/08/2020">
+                        <mat-icon class="date">today</mat-icon>
+
+                    </fieldset>
+                    <fieldset class="button_date">
+                        <legend>select end date</legend>
+                        <input class="input_date" value="17/09/2020">
+
+                        <mat-icon class="cloud">today</mat-icon>
+
+                    </fieldset>
+
+                    <fieldset class="button_date">
+                        <legend> Auto remainder</legend>
+                        <input class="input_date" value="4      Days">
+
+                    </fieldset>
+                </div>
+
+                <div>
+                    <fieldset class="button_title">
+                        <legend> Select content PPT File</legend>
+                        <input class="input_text" value="secure coding.ppt">
+
+                        <mat-icon ngxMatFileInputIcon class="cloud">cloud_upload</mat-icon>
+
+                    </fieldset>
+
+
+                    <fieldset class="button_text">
+                        <legend>select participant XL sheet</legend>
+                        <input class="input_text" value="participant.xls">
+
+                        <mat-icon class="cloud">cloud_upload</mat-icon>
+
+                    </fieldset>
+
+                </div>
+                <fieldset class="description">
+                    <legend> Mail </legend>
+                    <input class="description_text"
+                        value="These Guidelines Helps you to code in a secure manor which would assist in keeping the product data safe">
+                </fieldset>
+            </div>
+
+
+            <div class="option">
+                <div class="vertical-line"></div>
+                <button class="button_save" type="button">
+                    <mat-icon aria-hidden="false">save</mat-icon> SAVE
+                </button><br>
+                <button class="button_save" type="button">
+                    <mat-icon aria-hidden="false">preview</mat-icon> PREVIEW
+                </button><br>
+                <button class="button_save" type="button">
+                    <mat-icon aria-hidden="false">publish</mat-icon> PUBLISH
+                </button><br>
+                <button class="button_save" type="button">
+                    <mat-icon aria-hidden="false">add_alert</mat-icon> REMIND
+                </button><br>
+                <button class="button_save" type="button">
+                    <mat-icon aria-hidden="false">article</mat-icon> GENERATE REPORT
+                </button><br>
+
 
             </div>
-            <fieldset class="check_box_text">
-                <legend> check box text</legend>
-                <input class="input_text " value="I had the red guidelines">
-            </fieldset>
-            <p class="additional_details">Additional Details</p>
-
-          
-            <div>
-                <fieldset class="button_title">
-                    <legend> Select content PPT File</legend>
-                    <input class="input_text" value="secure coding.ppt">
-                </fieldset>
 
 
-                <fieldset class="button_text">
-                    <legend>select participant XL sheet</legend>
-                    <input class="input_text" value="participant.xls">
-                </fieldset>
-
-            </div>
-            <fieldset class="description">
-                <legend> Mail </legend>
-                <input class="description_text" value="These Guidelines Helps you to code in a secure manor which would assist in keeping the product data safe">
-            </fieldset>
-
-           
-        </div>
-        <div class="options">
-            <div class="vertical-line"></div>
-            <button class="button_save" type="button">
-                <mat-icon aria-hidden="false">save</mat-icon>SAVE
-            </button><br>
-            <button class="button_save" type="button">
-                <mat-icon aria-hidden="false">preview</mat-icon>PREVIEW
-            </button><br>
-            <button class="button_save" type="button">
-                <mat-icon aria-hidden="false">publish</mat-icon>PUBLISH
-            </button><br>
-            <button class="button_save" type="button">
-                <mat-icon aria-hidden="false">remind</mat-icon>REMIND
-            </button><br>
-            <button class="button_save" type="button">
-                <mat-icon aria-hidden="false">generate report</mat-icon>GENERATE REPORT
-            </button><br>
+            <button type="button" class="button_add " (click)="options()">
+                <mat-icon aria-hidden="false">add</mat-icon>
+            </button>
 
         </div>
-       <button type="menu" class="button_add"> <mat-icon aria-hidden="false">add</mat-icon>
-       </button>
+        <div class="footer">
+            <p class="robosoft-copyright">Robosoft. Copyright © 2020. All rights reserved</p>
+        </div>
     </div>
 </div>
+
+
+<!--OPTIONS-->
+
+<div class="options" id="options">
+    <a routerLink="/changePassword">
+        <button class="block1" style="font-family: Roboto;">Change Password</button>
+    </a>
+    <button class="block2" (click)="superAdmin()">Add/Remove Super Admins</button>
+    <button class="block3" (click)="admin()">Add/Remove Admins</button>
+    <button class="btn-fab">x</button>
+
+</div>
+
+<!-- GREY SCREEN-->
+<div class="screen" id="screen"></div>
+
+<!--SUPER ADMIN-->
+
+<div class="superAdmin" id="superAdmin">
+    <p class="cancel" >X</p>
+            <p class="text_super_admin">Add/Remove Super Admins</p>
+            <div>
+                <input class="input_super_admin" placeholder="Enter Name">
+                <input class="input_super_admin" placeholder="Enter Employee name">
+                <input class="email_super_admin" placeholder="Enter E-Mail id">
+                <button>
+                    <mat-icon aria-hidden="false">add</mat-icon>
+                </button>
+            </div>
+            <hr>
+            <div>
+                <input class="input_super_admin" placeholder="Kevin">
+                <input class="input_super_admin" placeholder="RT1234">
+                <input class="email_super_admin" placeholder="kevin@Robosoftin.com">
+                <button type="button">
+                    <mat-icon aria-hidden="false">create</mat-icon>
+                </button>
+                <button type="button">
+                    <mat-icon aria-hidden="false">delete</mat-icon>
+                </button>
+            </div>
+            <div>
+                <input class="input_super_admin" placeholder="John">
+                <input class="input_super_admin" placeholder="23456">
+                <input class="email_super_admin" placeholder="john@Robosoftin.com">
+                <button type="button">
+                    <mat-icon aria-hidden="false">create</mat-icon>
+                </button>
+                <button type="button">
+                    <mat-icon aria-hidden="false">delete</mat-icon>
+                </button>
+            </div>
+            <div>
+               <button  class="update_super_admin" routerLink="/home" type="button">Update</button>
+                <button class="cancel_super_admin" type="button">Cancel</button>
+            </div>
+        </div>
+
+        <!--ADMIN-->
+
+        <div class="admin" id="admin">
+            <p class="cancel" routerLink="/home">X</p>
+                    <p class="text_admin">Add/Remove Admins</p>
+                    <div>
+                        <input class="input_admin" placeholder="Enter Name">
+                        <input class="input_admin" placeholder="Enter Employee name">
+                        <input class="email_admin" placeholder="Enter E-Mail id">
+                        <button>
+                            <mat-icon aria-hidden="false">add</mat-icon>
+                        </button>
+                    </div>
+                    <hr>
+                    <div>
+                        <input class="input_admin" placeholder="Rob">
+                        <input class="input_admin" placeholder="RT54321">
+                        <input class="email_admin" placeholder="rob@Robosoftin.com">
+                        <button type="button">
+                            <mat-icon aria-hidden="false">create</mat-icon>
+                        </button>
+                        <button type="button">
+                            <mat-icon aria-hidden="false">delete</mat-icon>
+                        </button>
+                    </div>
+                    <div>
+                        <input class="input_admin" placeholder="Jane">
+                        <input class="input_admin" placeholder="RT98765">
+                        <input class="email_admin" placeholder="jane@Robosoftin.com">
+                        <button type="button">
+                            <mat-icon aria-hidden="false">create</mat-icon>
+                        </button>
+                        <button type="button">
+                            <mat-icon aria-hidden="false">delete</mat-icon>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="update_admin" routerLink="/home" type="button">Update</button>
+                        <button class="cancel_admin" type="button">Cancel</button>
+                    </div>
+                </div>

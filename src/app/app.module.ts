@@ -7,12 +7,18 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './login/login.component';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule} from '@angular/material/input';
 import { EntryComponent } from './entry/entry.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ChangePasswordFilledComponent } from './change-password-filled/change-password-filled.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule} from '@angular/material/datepicker';
+
+import { AdminComponent } from './admin/admin.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+
+
 
 @NgModule({
   declarations: [
@@ -29,6 +35,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     
     ChangePasswordFilledComponent,
     
+    
+    
+    AdminComponent,
+    
  
   ],
   imports: [
@@ -40,6 +50,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatDatepickerModule,
    
     
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
   ],
   providers: [],
   bootstrap: [AppComponent],
