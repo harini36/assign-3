@@ -18,8 +18,6 @@ import { AdminComponent } from './admin/admin.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

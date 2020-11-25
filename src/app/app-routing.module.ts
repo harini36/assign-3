@@ -8,7 +8,7 @@ import {ForgotpasswordComponent} from './forgotpassword/forgotpassword.component
 import {ChangePasswordComponent} from './change-password/change-password.component';
 import {ChangePasswordFilledComponent} from './change-password-filled/change-password-filled.component';
 
-import {AuthGuardService as AuthGuard} from './auth-guard.service';
+import {AuthGuardService as AuthGuard, AuthGuardService} from './auth-guard.service';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -19,8 +19,7 @@ const routes: Routes = [
   {path:'changePassword',component:ChangePasswordComponent},
   {path:'changepasswordfilled',component:ChangePasswordFilledComponent},
   
-  { path: 'home', component: HomeComponent,canActivate: [AuthGuard] 
-  },
+  { path: 'home', component: HomeComponent },
  
 ];
 

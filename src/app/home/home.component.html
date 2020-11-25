@@ -155,12 +155,15 @@ on the following link
 <!--OPTIONS-->
 
 <div class="options" id="options">
+    
     <a routerLink="/changePassword">
-        <button class="block1" style="font-family: Roboto;">Change Password</button>
+        <button class="block1" >Change Password</button>
     </a>
     <button class="block2" (click)="superAdmin()">Add/Remove Super Admins</button>
     <button class="block3" (click)="admin()">Add/Remove Admins</button>
-    <button class="btn-fab">x</button>
+    
+    <button class="btn-fab"  (click)="home()" >x</button>
+    
 
 </div>
 
@@ -174,7 +177,7 @@ on the following link
 <!--SUPER ADMIN-->
 
 <div class="superAdmin" id="superAdmin">
-    <p class="cancel" >X</p>
+    <p class="cancel" (click)="home()" >X</p>
             <p class="text_super_admin">Add/Remove Super Admins</p>
             <div>
                 <input class="input_super_admin" placeholder="Enter Name">
@@ -208,7 +211,7 @@ on the following link
                 </button>
             </div>
             <div>
-               <button  class="update_super_admin" routerLink="/home" type="button">Update</button>
+               <button  class="update_super_admin" (click)="home()" type="button">Update</button>
                 <button class="cancel_super_admin" type="button">Cancel</button>
             </div>
         </div>
@@ -216,7 +219,7 @@ on the following link
         <!--ADMIN-->
 
         <div class="admin" id="admin">
-            <p class="cancel" routerLink="/home">X</p>
+            <p class="cancel" (click)="home()" >X</p>
                     <p class="text_admin">Add/Remove Admins</p>
                     <div>
                         <input class="input_admin" placeholder="Enter Name">
@@ -250,7 +253,7 @@ on the following link
                         </button>
                     </div>
                     <div>
-                        <button class="update_admin" routerLink="/home" type="button">Update</button>
+                        <button class="update_admin" (click)="home()" type="button">Update</button>
                         <button class="cancel_admin" type="button">Cancel</button>
                     </div>
                 </div>
