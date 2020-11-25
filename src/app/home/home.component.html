@@ -1,22 +1,25 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 
+<!--Header-->
 
 <div class="home_page" id="home_page">
     <div class="toolbar">
         <img class="logo" src='\assets\Robosoft_logo_horizontal.png' alt="Robosoft_logo">
-        <p class="text">Jane Doe</p>
+        <p class="jane_doe">Jane Doe</p>
         <div class="space"></div>
         <img class="profile " src='\assets\profile.png' alt='jane_doe'>
     </div>
+
+    <!--home-page-->
 
     <div class="float-container">
         <div class="container">
             <h1>Your Questionnaires</h1>
             <button class="button_questionnair" type="submit">New Questionnaire</button>
             <button class="button_secure_codding" type="submit">Secure coding Guidelines</button>
-            <p class="txt">ISMS Questionnaire <img class="arrow_ISMS" src="\assets\ic_arrow_forward.png" alt=""> </p>
-            <p class="txt">PA Questionnaire <img class="arrow_PA" src="\assets\ic_arrow_forward.png" alt=""></p>
-            <p class="txt">Process Guidelines <img class="arrow_process" src="\assets\ic_arrow_forward.png" alt=""></p>
+            <p class="arrow_text">ISMS Questionnaire <img class="arrow_ISMS" src="\assets\ic_arrow_forward.png" alt=""> </p>
+            <p class="arrow_text">PA Questionnaire <img class="arrow_PA" src="\assets\ic_arrow_forward.png" alt=""></p>
+            <p class="arrow_text">Process Guidelines <img class="arrow_process" src="\assets\ic_arrow_forward.png" alt=""></p>
         </div>
 
         <div class="container_main">
@@ -25,18 +28,15 @@
 
                 <p class="questionnaire">Questionnaire</p>
 
-
-                <fieldset class="enter_title">
+               <fieldset class="enter_title">
                     <legend> Enter Title</legend>
                     <input class="input_text " value="Secure coding Guidelines">
                 </fieldset>
-
                 <p class="hint">Please enter appropriate title</p>
 
                 <fieldset class="description">
                     <legend> Description </legend>
-                    <input class="description_text"
-                        value="These Guidelines Helps you to code in a secure manor which would assist in keeping the product data safe">
+                    <textarea rows="2" class="description_text">These Guidelines Helps you to code in a secure manor which would assist in keeping the product data safe</textarea>
                 </fieldset>
 
                 <div>
@@ -52,29 +52,35 @@
                     </fieldset>
 
                 </div>
+
                 <fieldset class="check_box_text">
                     <legend> check box text</legend>
                     <input class="input_text " value="I had the red guidelines">
                 </fieldset>
+
                 <p class="additional_details">Additional Details</p>
+
                 <div>
+
                     <fieldset class="button_date">
                         <legend> Select start date</legend>
-                        <input class="input_date" value="17/08/2020">
-                        <mat-icon class="date">today</mat-icon>
+                        <input class="input_text" value="17/08/2020">
+
+                        <mat-icon ngxMatFileInputIcon class="date">today</mat-icon>
 
                     </fieldset>
-                    <fieldset class="button_date">
-                        <legend>select end date</legend>
-                        <input class="input_date" value="17/09/2020">
 
-                        <mat-icon class="cloud">today</mat-icon>
+                    <fieldset class="button_date">
+                        <legend> Select end date</legend>
+                        <input class="input_text" value="17/09/2020">
+
+                        <mat-icon ngxMatFileInputIcon class="date">today</mat-icon>
 
                     </fieldset>
 
                     <fieldset class="button_date">
                         <legend> Auto remainder</legend>
-                        <input class="input_date" value="4      Days">
+                        <input class="input_date" value="4                            Days">
 
                     </fieldset>
                 </div>
@@ -98,10 +104,14 @@
                     </fieldset>
 
                 </div>
-                <fieldset class="description">
-                    <legend> Mail </legend>
-                    <input class="description_text"
-                        value="These Guidelines Helps you to code in a secure manor which would assist in keeping the product data safe">
+                
+                      
+                <fieldset class="mail_body">
+                    <legend> Description </legend>
+                    <textarea type="text" rows="4" class="description_mail">Hello <Name>
+You are hear-by invited to read and accept the terms and conditions by clicking
+on the following link
+<link></textarea>
                 </fieldset>
             </div>
 
@@ -131,11 +141,13 @@
             <button type="button" class="button_add " (click)="options()">
                 <mat-icon aria-hidden="false">add</mat-icon>
             </button>
-
         </div>
+    </div>
+        
         <div class="footer">
             <p class="robosoft-copyright">Robosoft. Copyright © 2020. All rights reserved</p>
-        </div>
+        
+    
     </div>
 </div>
 
@@ -154,6 +166,10 @@
 
 <!-- GREY SCREEN-->
 <div class="screen" id="screen"></div>
+
+<!--white screen-->
+
+<div class="white_screen" id="white_screen"></div>
 
 <!--SUPER ADMIN-->
 

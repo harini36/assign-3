@@ -1,18 +1,23 @@
-.rectangle {
+//Header//
+
+.login_background {
   height: 1138px;
   width: 1440px;
   background: linear-gradient(52.03deg, #7A7FC8 0%, #BD385B 100%);
   margin-top: 100px;
   left: 0;
+  right: 0;
+
 }
 
-.toolbar {
+
+.header {
+  height: 100px;
+  width: auto;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 100px;
-  width: auto;
   display: flex;
   align-items: center;
   background-color: #ffffff;
@@ -23,10 +28,13 @@
 }
 
 .logo {
-  margin-left: 90px;
   width: 280px;
   height: 54px;
+  margin-left: 90px;
+
 }
+
+//Login//
 
 .container {
 
@@ -40,12 +48,13 @@
 }
 
 .login {
-  font-family: inter Medium;
+  font-family: Inter Medium;
   font-size: 24px;
   line-height: 29px;
   color: #000000;
   margin-left: 230px;
   margin-top: 40px;
+  letter-spacing: normal;
 
 }
 
@@ -61,10 +70,11 @@
   letter-spacing: 0.2px;
   border-width: 1px;
   color: rgba(0, 0, 0, 0.6);
-  font-family: Roboto;
+  font-family: Roboto ;
   letter-spacing: 0.15px;
   line-height: 24px;
-  
+  fill:solid;
+
 
 
 }
@@ -80,10 +90,11 @@
   margin-left: 90px;
   font-size: 16px;
   letter-spacing: 0.2px;
-  color: rgba(0, 0, 0, 0.6);
+  color: black;
   font-family: Roboto;
   letter-spacing: 0.15px;
   line-height: 24px;
+  fill:solid;
 
 
 }
@@ -104,6 +115,9 @@
   line-height: 16px;
   text-align: center;
   font-family: Roboto;
+  fill:solid;
+  box-shadow: 0 0 4px 0 #D92756;
+
 }
 
 .forgot-password {
