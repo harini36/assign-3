@@ -17,9 +17,11 @@
             <h1>Your Questionnaires</h1>
             <button class="button_questionnair" type="submit">New Questionnaire</button>
             <button class="button_secure_codding" type="submit">Secure coding Guidelines</button>
-            <p class="arrow_text">ISMS Questionnaire <img class="arrow_ISMS" src="\assets\ic_arrow_forward.png" alt=""> </p>
+            <p class="arrow_text">ISMS Questionnaire <img class="arrow_ISMS" src="\assets\ic_arrow_forward.png" alt="">
+            </p>
             <p class="arrow_text">PA Questionnaire <img class="arrow_PA" src="\assets\ic_arrow_forward.png" alt=""></p>
-            <p class="arrow_text">Process Guidelines <img class="arrow_process" src="\assets\ic_arrow_forward.png" alt=""></p>
+            <p class="arrow_text">Process Guidelines <img class="arrow_process" src="\assets\ic_arrow_forward.png"
+                    alt=""></p>
         </div>
 
         <div class="container_main">
@@ -28,15 +30,16 @@
 
                 <p class="questionnaire">Questionnaire</p>
 
-               <fieldset class="enter_title">
+                <fieldset class="enter_title">
                     <legend> Enter Title</legend>
-                    <input class="input_text " value="Secure coding Guidelines">
+                    <input class="input_title " value="Secure coding Guidelines">
                 </fieldset>
                 <p class="hint">Please enter appropriate title</p>
 
                 <fieldset class="description">
                     <legend> Description </legend>
-                    <textarea rows="2" class="description_text">These Guidelines Helps you to code in a secure manor which would assist in keeping the product data safe</textarea>
+                    <textarea rows="2"
+                        class="description_text">These Guidelines Helps you to code in a secure manor which would assist in keeping the product data safe</textarea>
                 </fieldset>
 
                 <div>
@@ -48,14 +51,14 @@
 
                     <fieldset class="button_text">
                         <legend>Button Text</legend>
-                        <input class="input_text" value="I have the red guidelines">
+                        <input class="btn_text" value="I have the red guidelines">
                     </fieldset>
 
                 </div>
 
                 <fieldset class="check_box_text">
                     <legend> check box text</legend>
-                    <input class="input_text " value="I had the red guidelines">
+                    <input class="input_title " value="I had the red guidelines">
                 </fieldset>
 
                 <p class="additional_details">Additional Details</p>
@@ -88,7 +91,7 @@
                 <div>
                     <fieldset class="button_title">
                         <legend> Select content PPT File</legend>
-                        <input class="input_text" value="secure coding.ppt">
+                        <input class="cloud_text" value="secure coding.ppt">
 
                         <mat-icon ngxMatFileInputIcon class="cloud">cloud_upload</mat-icon>
 
@@ -97,15 +100,15 @@
 
                     <fieldset class="button_text">
                         <legend>select participant XL sheet</legend>
-                        <input class="input_text" value="participant.xls">
+                        <input class="cloud_text" value="participant.xls">
 
                         <mat-icon class="cloud">cloud_upload</mat-icon>
 
                     </fieldset>
 
                 </div>
-                
-                      
+
+
                 <fieldset class="mail_body">
                     <legend> Description </legend>
                     <textarea type="text" rows="4" class="description_mail">Hello <Name>
@@ -119,19 +122,19 @@ on the following link
             <div class="option">
                 <div class="vertical-line"></div>
                 <button class="button_save" type="button">
-                    <mat-icon aria-hidden="false">save</mat-icon> SAVE
+                    <mat-icon aria-hidden="false">save</mat-icon>SAVE
                 </button><br>
                 <button class="button_save" type="button">
-                    <mat-icon aria-hidden="false">preview</mat-icon> PREVIEW
+                    <mat-icon aria-hidden="false">preview</mat-icon>PREVIEW
                 </button><br>
                 <button class="button_save" type="button">
-                    <mat-icon aria-hidden="false">publish</mat-icon> PUBLISH
+                    <mat-icon aria-hidden="false">publish</mat-icon>PUBLISH
                 </button><br>
                 <button class="button_save" type="button">
-                    <mat-icon aria-hidden="false">add_alert</mat-icon> REMIND
+                    <mat-icon aria-hidden="false">add_alert</mat-icon>REMIND
                 </button><br>
                 <button class="button_save" type="button">
-                    <mat-icon aria-hidden="false">article</mat-icon> GENERATE REPORT
+                    <mat-icon aria-hidden="false">article</mat-icon>GENERATE REPORT
                 </button><br>
 
 
@@ -143,27 +146,25 @@ on the following link
             </button>
         </div>
     </div>
-        
-        <div class="footer">
-            <p class="robosoft-copyright">Robosoft. Copyright © 2020. All rights reserved</p>
-        
-    
+
+    <div class="footer">
+        <p class="robosoft-copyright">Robosoft. Copyright © 2020. All rights reserved</p>
     </div>
+
 </div>
 
 
 <!--OPTIONS-->
 
 <div class="options" id="options">
-    
+
     <a routerLink="/changePassword">
-        <button class="block1" >Change Password</button>
+        <button class="block1">Change Password</button>
     </a>
     <button class="block2" (click)="superAdmin()">Add/Remove Super Admins</button>
     <button class="block3" (click)="admin()">Add/Remove Admins</button>
-    
-    <button class="btn-fab"  (click)="home()" >x</button>
-    
+    <button class="btn-fab" (click)="home()">x</button>
+
 
 </div>
 
@@ -177,83 +178,83 @@ on the following link
 <!--SUPER ADMIN-->
 
 <div class="superAdmin" id="superAdmin">
-    <p class="cancel" (click)="home()" >X</p>
-            <p class="text_super_admin">Add/Remove Super Admins</p>
-            <div>
-                <input class="input_super_admin" placeholder="Enter Name">
-                <input class="input_super_admin" placeholder="Enter Employee name">
-                <input class="email_super_admin" placeholder="Enter E-Mail id">
-                <button>
-                    <mat-icon aria-hidden="false">add</mat-icon>
-                </button>
-            </div>
-            <hr>
-            <div>
-                <input class="input_super_admin" placeholder="Kevin">
-                <input class="input_super_admin" placeholder="RT1234">
-                <input class="email_super_admin" placeholder="kevin@Robosoftin.com">
-                <button type="button">
-                    <mat-icon aria-hidden="false">create</mat-icon>
-                </button>
-                <button type="button">
-                    <mat-icon aria-hidden="false">delete</mat-icon>
-                </button>
-            </div>
-            <div>
-                <input class="input_super_admin" placeholder="John">
-                <input class="input_super_admin" placeholder="23456">
-                <input class="email_super_admin" placeholder="john@Robosoftin.com">
-                <button type="button">
-                    <mat-icon aria-hidden="false">create</mat-icon>
-                </button>
-                <button type="button">
-                    <mat-icon aria-hidden="false">delete</mat-icon>
-                </button>
-            </div>
-            <div>
-               <button  class="update_super_admin" (click)="home()" type="button">Update</button>
-                <button class="cancel_super_admin" type="button">Cancel</button>
-            </div>
-        </div>
+    <p class="cancel" (click)="home()">X</p>
+    <p class="text_super_admin">Add/Remove Super Admins</p>
+    <div>
+        <input class="input_super_admin" placeholder="Enter Name">
+        <input class="input_super_admin" placeholder="Enter Employee name">
+        <input class="email_super_admin" placeholder="Enter E-Mail id">
+        <button>
+            <mat-icon aria-hidden="false">add</mat-icon>
+        </button>
+    </div>
+    <hr>
+    <div>
+        <input class="input_super_admin" placeholder="Kevin">
+        <input class="input_super_admin" placeholder="RT1234">
+        <input class="email_super_admin" placeholder="kevin@Robosoftin.com">
+        <button type="button">
+            <mat-icon aria-hidden="false">create</mat-icon>
+        </button>
+        <button type="button">
+            <mat-icon aria-hidden="false">delete</mat-icon>
+        </button>
+    </div>
+    <div>
+        <input class="input_super_admin" placeholder="John">
+        <input class="input_super_admin" placeholder="23456">
+        <input class="email_super_admin" placeholder="john@Robosoftin.com">
+        <button type="button">
+            <mat-icon aria-hidden="false">create</mat-icon>
+        </button>
+        <button type="button">
+            <mat-icon aria-hidden="false">delete</mat-icon>
+        </button>
+    </div>
+    <div>
+        <button class="update_super_admin" (click)="home()" type="button">Update</button>
+        <button class="cancel_super_admin" type="button">Cancel</button>
+    </div>
+</div>
 
-        <!--ADMIN-->
+<!--ADMIN-->
 
-        <div class="admin" id="admin">
-            <p class="cancel" (click)="home()" >X</p>
-                    <p class="text_admin">Add/Remove Admins</p>
-                    <div>
-                        <input class="input_admin" placeholder="Enter Name">
-                        <input class="input_admin" placeholder="Enter Employee name">
-                        <input class="email_admin" placeholder="Enter E-Mail id">
-                        <button>
-                            <mat-icon aria-hidden="false">add</mat-icon>
-                        </button>
-                    </div>
-                    <hr>
-                    <div>
-                        <input class="input_admin" placeholder="Rob">
-                        <input class="input_admin" placeholder="RT54321">
-                        <input class="email_admin" placeholder="rob@Robosoftin.com">
-                        <button type="button">
-                            <mat-icon aria-hidden="false">create</mat-icon>
-                        </button>
-                        <button type="button">
-                            <mat-icon aria-hidden="false">delete</mat-icon>
-                        </button>
-                    </div>
-                    <div>
-                        <input class="input_admin" placeholder="Jane">
-                        <input class="input_admin" placeholder="RT98765">
-                        <input class="email_admin" placeholder="jane@Robosoftin.com">
-                        <button type="button">
-                            <mat-icon aria-hidden="false">create</mat-icon>
-                        </button>
-                        <button type="button">
-                            <mat-icon aria-hidden="false">delete</mat-icon>
-                        </button>
-                    </div>
-                    <div>
-                        <button class="update_admin" (click)="home()" type="button">Update</button>
-                        <button class="cancel_admin" type="button">Cancel</button>
-                    </div>
-                </div>
+<div class="admin" id="admin">
+    <p class="cancel" (click)="home()">X</p>
+    <p class="text_admin">Add/Remove Admins</p>
+    <div>
+        <input class="input_admin" placeholder="Enter Name">
+        <input class="input_admin" placeholder="Enter Employee name">
+        <input class="email_admin" placeholder="Enter E-Mail id">
+        <button>
+            <mat-icon aria-hidden="false">add</mat-icon>
+        </button>
+    </div>
+    <hr>
+    <div>
+        <input class="input_admin" placeholder="Rob">
+        <input class="input_admin" placeholder="RT54321">
+        <input class="email_admin" placeholder="rob@Robosoftin.com">
+        <button type="button">
+            <mat-icon aria-hidden="false">create</mat-icon>
+        </button>
+        <button type="button">
+            <mat-icon aria-hidden="false">delete</mat-icon>
+        </button>
+    </div>
+    <div>
+        <input class="input_admin" placeholder="Jane">
+        <input class="input_admin" placeholder="RT98765">
+        <input class="email_admin" placeholder="jane@Robosoftin.com">
+        <button type="button">
+            <mat-icon aria-hidden="false">create</mat-icon>
+        </button>
+        <button type="button">
+            <mat-icon aria-hidden="false">delete</mat-icon>
+        </button>
+    </div>
+    <div>
+        <button class="update_admin" (click)="home()" type="button">Update</button>
+        <button class="cancel_admin" type="button">Cancel</button>
+    </div>
+</div>
