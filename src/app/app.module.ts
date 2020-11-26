@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { FormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './login/login.component';
@@ -32,6 +32,7 @@ import { AuthGuard } from './guards/auth.guard';
     MatInputModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
+    FormsModule,
 
 
   ],

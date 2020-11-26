@@ -1,3 +1,7 @@
+* {
+outline-style: none;
+}
+
 //Header//
 
 .spacer {
@@ -417,11 +421,10 @@ h1 {
   margin-bottom: 25px;
   border-radius: 10px;
   color: #D92756;
-  text-align-last: left;
   font-family: Roboto;
   font-weight: 500;
   margin-left: 10px;
-  align-self: center;
+  
 
 
 }
@@ -487,83 +490,53 @@ h1 {
 //options//
 
 .options {
-  height: 136px;
-  width: 198px;
+  
   position: absolute;
   z-index: 2;
-  margin-top: 824px;
-  margin-left: 1186px;
+  margin-top: 839px;
+  margin-left: 1045px;
+  height: 136px;
+  width: 198px;
 
 }
 
-.block1 {
-  height: 33.6px;
-  width: 194.6px;
-
-  border: none;
-  margin: 10px;
+@mixin size{
+  width: 194px;
+  height: 33px;
+  border-radius: 20px;
   background-color: #FDF4F6;
-  color: #D92756;
+  color:#D92756;
+  font-family: Roboto;
   font-size: 9.8px;
   font-weight: 500;
   letter-spacing: 0.88px;
   line-height: 11.2px;
   text-align: center;
-  border-radius: 24px;
-  outline: none;
+  margin:10px ;
+}
+
+
+.option_change_password{
+  @include size();
 
 }
 
-.block2 {
-  height: 33.6px;
-  width: 194.6px;
-  margin: 10px;
-  border: 0px;
-  position: 0;
-  background-color: #FDF4F6;
-  color: #D92756;
-  font-size: 9.8px;
-  font-weight: 500;
-  letter-spacing: 0.88px;
-  line-height: 11.2px;
-  text-align: center;
-  border-radius: 24px;
-  outline: none;
+.option_admin{
+  @include size();
 
 }
 
-.block3 {
-  height: 33.6px;
-  width: 194.6px;
-
-  border: 0px;
-  margin: 10px;
-  background-color: #FDF4F6;
-  color: #D92756;
-  font-size: 9.8px;
-  font-weight: 500;
-  letter-spacing: 0.88px;
-  line-height: 11.2px;
-  text-align: center;
-  border-radius: 24px;
-  outline: none;
+.option_superadmin{
+  @include size();
 
 }
-
-.btn-fab {
-  height: 51px;
-  width: 51px;
-  background-color: #D92756;
-  color: white;
-  font-size: 30px;
-  border-radius: 25px;
-  outline: none;
-  margin: 10px;
-  border: 0px;
-
-
-
+.back{
+  font-size: 16px;
+  margin-left: 155px;
 }
+
+
+//gray screen//
 
 .screen {
   height: 1138px;
@@ -573,6 +546,7 @@ h1 {
   z-index: 3;
   position: absolute;
 }
+//white screen//
 
 .white_screen {
   height: 1138px;
@@ -583,7 +557,57 @@ h1 {
   position: absolute;
 }
 
-//super Admin //
+//Super Admin and admin//
+
+@mixin border{
+  width: 198px;
+  height:50px;
+  border-radius:4px;
+  border-width: 1px;
+  border-color: #9E9E9E;
+  float: left;
+  border-style: groove;
+  text-align: center;
+  padding-top:15px;
+  color: rgba(0,0,0,0.6);
+  font-family: Roboto;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  line-height: 24px;
+  padding-left:8px;
+  
+
+}
+.border_1{
+  @include border();
+  margin-left: 30px;
+  margin-top: 20px;
+
+}
+.border_2{
+  @include border();
+  margin-left:50px;
+  margin-top: 20px;
+}
+.border_3{
+  height:50px;
+  width:300px;
+  border-radius:4px;
+  border-width: 1px;
+  border-color: #9E9E9E;
+  float: left;
+  border-style: groove;
+  margin-top: 20px;
+  margin-left: 50px;
+  color: rgba(0,0,0,0.6);
+  font-family: Roboto;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  line-height: 24px;
+  padding-top:15px;
+  padding-left:8px;
+}
+
 
 .superAdmin {
 
@@ -600,6 +624,7 @@ h1 {
 }
 
 .input_super_admin {
+
   height: 56px;
   width: 209px;
   border-radius: 4px;
@@ -615,6 +640,7 @@ h1 {
 }
 
 .email_super_admin {
+
   height: 56px;
   width: 306px;
   border-radius: 4px;
@@ -626,6 +652,15 @@ h1 {
   letter-spacing: 0.15px;
   line-height: 24px;
   border-width: 1px;
+}
+.admin_button{
+
+  margin-top:30px;
+  margin-left: 20px;
+}
+.row{
+
+  margin-top: 10px;
 }
 
 button {
@@ -651,6 +686,7 @@ button {
   line-height: 28px;
   margin-left: 20px;
   margin-top: 40px;
+
 }
 
 hr {
@@ -659,9 +695,10 @@ hr {
   margin-left: 0;
   border-style: dashed;
   color: #A2A2A2;
+  
 }
 
-.update_super_admin {
+@mixin super_admin{
   width: 129px;
   height: 49px;
   background-color: #D92756;
@@ -672,6 +709,11 @@ hr {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 1.25px;
+}
+
+.update_super_admin {
+
+ @include super_admin();
   margin-left: 500px;
   margin-top: 30px;
   float: left;
@@ -679,16 +721,8 @@ hr {
 }
 
 .cancel_super_admin {
-  width: 129px;
-  height: 49px;
-  background-color: #D92756;
-  color: white;
-  border-radius: 30px;
-  border: none;
-  font-family: Roboto;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 1.25px;
+
+  @include super_admin();
   margin-top: 30px;
   float: left;
   margin-left: 50px;
@@ -697,13 +731,12 @@ hr {
 }
 
 .cancel {
-  margin-left: 970px;
-  color: black;
+  margin-left: 985px;
+  color:gray;
   font-size: 32px;
   line-height: 2px;
 }
 
-//admin
 
 .admin {
 
@@ -717,101 +750,4 @@ hr {
   padding-left: 20px;
   position: absolute;
   z-index: -1;
-}
-
-.input_admin {
-  height: 56px;
-  width: 209px;
-  border-radius: 4px;
-  background-color: none;
-  font-family: Roboto;
-  padding-left: 10px;
-  margin: 20px;
-  font-size: 16px;
-  letter-spacing: 0.15px;
-  line-height: 24px;
-  border-width: 1px;
-
-}
-
-.email_admin {
-  height: 56px;
-  width: 306px;
-  border-radius: 4px;
-  background-color: none;
-  font-family: Roboto;
-  padding-left: 10px;
-  margin: 20px;
-  font-size: 16px;
-  letter-spacing: 0.15px;
-  line-height: 24px;
-  border-width: 1px;
-}
-
-button {
-  border-radius: 60%;
-  height: 51px;
-  width: 51px;
-  background-color: #D92756;
-  color: white;
-  border: none;
-  margin-left: 10px;
-
-
-}
-
-.text_admin {
-  height: 28px;
-  width: 297px;
-  color: #000000;
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-left: 20px;
-  margin-top: 40px;
-}
-
-hr {
-  width: auto;
-  text-align: left;
-  margin-left: 0;
-  border-style: dashed;
-  color: #A2A2A2;
-}
-
-.update_admin {
-  width: 129px;
-  height: 49px;
-  background-color: #D92756;
-  color: white;
-  border-radius: 30px;
-  border: none;
-  font-family: Roboto;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 1.25px;
-  margin-left: 500px;
-  margin-top: 30px;
-  float: left;
-
-}
-
-.cancel_admin {
-  width: 129px;
-  height: 49px;
-  background-color: #D92756;
-  color: white;
-  border-radius: 30px;
-  border: none;
-  font-family: Roboto;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 1.25px;
-  margin-top: 30px;
-  float: left;
-  margin-left: 50px;
-
-
 }

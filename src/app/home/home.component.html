@@ -122,19 +122,19 @@ on the following link
             <div class="option">
                 <div class="vertical-line"></div>
                 <button class="button_save" type="button">
-                    <mat-icon aria-hidden="false">save</mat-icon>SAVE
+                    <mat-icon  aria-hidden="false">save</mat-icon>SAVE
                 </button><br>
                 <button class="button_save" type="button">
-                    <mat-icon aria-hidden="false">preview</mat-icon>PREVIEW
+                    <mat-icon  aria-hidden="false">preview</mat-icon>PREVIEW
                 </button><br>
                 <button class="button_save" type="button">
-                    <mat-icon aria-hidden="false">publish</mat-icon>PUBLISH
+                    <mat-icon  aria-hidden="false">publish</mat-icon>PUBLISH
                 </button><br>
                 <button class="button_save" type="button">
-                    <mat-icon aria-hidden="false">add_alert</mat-icon>REMIND
+                    <mat-icon  aria-hidden="false">add_alert</mat-icon>REMIND
                 </button><br>
                 <button class="button_save" type="button">
-                    <mat-icon aria-hidden="false">article</mat-icon>GENERATE REPORT
+                    <mat-icon  aria-hidden="false">article</mat-icon>GENERATE REPORT
                 </button><br>
 
 
@@ -159,11 +159,11 @@ on the following link
 <div class="options" id="options">
 
     <a routerLink="/changePassword">
-        <button class="block1">Change Password</button>
+        <button class="option_change_password">Change Password</button>
     </a>
-    <button class="block2" (click)="superAdmin()">Add/Remove Super Admins</button>
-    <button class="block3" (click)="admin()">Add/Remove Admins</button>
-    <button class="btn-fab" (click)="home()">x</button>
+    <button class="option_superadmin" (click)="superAdmin()">Add/Remove Super Admins</button>
+    <button class="option_admin" (click)="Admin()">Add/Remove Admins</button>
+    <button class="back" (click)="home()">x</button>
 
 
 </div>
@@ -175,86 +175,90 @@ on the following link
 
 <div class="white_screen" id="white_screen"></div>
 
-<!--SUPER ADMIN-->
-
-<div class="superAdmin" id="superAdmin">
-    <p class="cancel" (click)="home()">X</p>
-    <p class="text_super_admin">Add/Remove Super Admins</p>
-    <div>
-        <input class="input_super_admin" placeholder="Enter Name">
-        <input class="input_super_admin" placeholder="Enter Employee name">
-        <input class="email_super_admin" placeholder="Enter E-Mail id">
-        <button>
-            <mat-icon aria-hidden="false">add</mat-icon>
-        </button>
-    </div>
-    <hr>
-    <div>
-        <input class="input_super_admin" placeholder="Kevin">
-        <input class="input_super_admin" placeholder="RT1234">
-        <input class="email_super_admin" placeholder="kevin@Robosoftin.com">
-        <button type="button">
-            <mat-icon aria-hidden="false">create</mat-icon>
-        </button>
-        <button type="button">
-            <mat-icon aria-hidden="false">delete</mat-icon>
-        </button>
-    </div>
-    <div>
-        <input class="input_super_admin" placeholder="John">
-        <input class="input_super_admin" placeholder="23456">
-        <input class="email_super_admin" placeholder="john@Robosoftin.com">
-        <button type="button">
-            <mat-icon aria-hidden="false">create</mat-icon>
-        </button>
-        <button type="button">
-            <mat-icon aria-hidden="false">delete</mat-icon>
-        </button>
-    </div>
-    <div>
-        <button class="update_super_admin" (click)="home()" type="button">Update</button>
-        <button class="cancel_super_admin" type="button">Cancel</button>
-    </div>
-</div>
-
 <!--ADMIN-->
 
 <div class="admin" id="admin">
-    <p class="cancel" (click)="home()">X</p>
-    <p class="text_admin">Add/Remove Admins</p>
+    <p class="cancel" (click)="home()">x</p>
+    <p class="text_super_admin">Add/Remove Super Admins</p>
     <div>
-        <input class="input_admin" placeholder="Enter Name">
-        <input class="input_admin" placeholder="Enter Employee name">
-        <input class="email_admin" placeholder="Enter E-Mail id">
-        <button>
+        <mat-form-field appearance="outline"  class="input_super_admin">
+            <mat-label>Enter Name</mat-label>
+            <input [(ngModel)]="admin.name" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline"  class="input_super_admin">
+            <mat-label>Enter Employee ID</mat-label>
+            <input [(ngModel)]="admin.employeeCode" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline"  class="email_super_admin">
+            <mat-label>Enter E-mail id</mat-label>
+            <input [(ngModel)]="admin.email" matInput>
+        </mat-form-field>
+
+        <button (click)="save()">
             <mat-icon aria-hidden="false">add</mat-icon>
         </button>
     </div>
     <hr>
+
+    
+    <div class="row" *ngFor="let admin of adminlist">
+       <p class="border_1">{{admin.name}}</p>
+       <p class="border_2">{{admin.employeeCode}}</p>
+       <p class="border_3">{{admin.email}}</p>
+       <button class="admin_button" type="button">
+       <mat-icon  aria-hidden="false">create</mat-icon>
+    </button>
+    <button (click)="delete(admin)"  class="admin_button" type="button">
+        <mat-icon aria-hidden="false">delete</mat-icon>
+    </button><br>
+          </div>
+        <button class="update_super_admin" (click)="home()" type="button">Update</button>
+        <button class="cancel_super_admin" (click)="home()" type="button">Cancel</button>
+    </div>
+
+
+<!-- super ADMIN-->
+
+
+    <div class="superAdmin" id="superAdmin">
+    <p class="cancel" (click)="home()">x</p>
+    <p class="text_super_admin">Add/Remove Admins</p>
     <div>
-        <input class="input_admin" placeholder="Rob">
-        <input class="input_admin" placeholder="RT54321">
-        <input class="email_admin" placeholder="rob@Robosoftin.com">
-        <button type="button">
-            <mat-icon aria-hidden="false">create</mat-icon>
-        </button>
-        <button type="button">
-            <mat-icon aria-hidden="false">delete</mat-icon>
+        <mat-form-field appearance="outline"  class="input_super_admin">
+            <mat-label>Enter Name</mat-label>
+            <input [(ngModel)]="super_admin.name" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline"  class="input_super_admin">
+            <mat-label>Enter Employee ID</mat-label>
+            <input [(ngModel)]="super_admin.employeeCode" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline"  class="email_super_admin">
+            <mat-label>Enter E-mail id</mat-label>
+            <input [(ngModel)]="super_admin.email" matInput>
+        </mat-form-field>
+
+        <button (click)="save_1()">
+            <mat-icon aria-hidden="false">add</mat-icon>
         </button>
     </div>
-    <div>
-        <input class="input_admin" placeholder="Jane">
-        <input class="input_admin" placeholder="RT98765">
-        <input class="email_admin" placeholder="jane@Robosoftin.com">
-        <button type="button">
-            <mat-icon aria-hidden="false">create</mat-icon>
-        </button>
-        <button type="button">
-            <mat-icon aria-hidden="false">delete</mat-icon>
-        </button>
+    <hr>
+    <div class="row" *ngFor="let admin of adminlist">
+       <p class="border_1">{{super_admin.name}}</p>
+       <p class="border_2">{{super_admin.employeeCode}}</p>
+       <p class="border_3">{{super_admin.email}}</p>
+       <button class="admin_button" type="button">
+       <mat-icon  aria-hidden="false">create</mat-icon>
+    </button>
+    <button (click)="delete_1(super_admin)"  class="admin_button" type="button">
+        <mat-icon aria-hidden="false">delete</mat-icon>
+    </button><br>
+          </div>
+        <button class="update_super_admin" (click)="home()" type="button">Update</button>
+        <button class="cancel_super_admin" (click)="home()" type="button">Cancel</button>
     </div>
-    <div>
-        <button class="update_admin" (click)="home()" type="button">Update</button>
-        <button class="cancel_admin" type="button">Cancel</button>
-    </div>
-</div>
+
+
+
+
+
+
