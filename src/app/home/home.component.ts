@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Admin } from './admin';
-import {ADMIN} from './admin-list';
-import { SUPERADMIN } from './Superadmin_list';
-import {Superadmin} from './super_admin';
-
-
-
+import { ADMIN } from './admin_list';
+import { SUPERADMIN } from './superadmin_list';
+import { Superadmin } from './super_admin';
 
 @Component({
   selector: 'app-home',
@@ -13,31 +10,32 @@ import {Superadmin} from './super_admin';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  
+
 
   admin: Admin = {
     name: "",
     employeeCode: "",
     email: "",
   }
-  adminlist= ADMIN ;
-  
-  super_admin:Superadmin={
+  adminlist = ADMIN;
+
+  super_admin: Superadmin = {
     name: "",
     employeeCode: "",
     email: "",
   }
-  Superadmin_list=SUPERADMIN;
+  superadmin_list = SUPERADMIN;
 
-
-  constructor( ) { };
+  
+  constructor() { };
+ 
 
   ngOnInit(): void {
-    
-   };
 
-  
-  
+  };
+
+
+
 
   home(): void {
     document.getElementById('home_page').style.zIndex = "5";
@@ -71,29 +69,29 @@ export class HomeComponent implements OnInit {
     document.getElementById('superAdmin').style.zIndex = "-5";
     document.getElementById('admin').style.zIndex = "5";
   }
-  save(){
-   const temp :Admin={...this.admin}
-   this.adminlist.unshift(temp)
+  save() {
+    const temp: Admin = { ...this.admin }
+    this.adminlist.unshift(temp)
   }
 
-  delete(admin:Admin):void{
-    this.adminlist.forEach((item,index)=>{
-      if(item===admin){
-        this.adminlist.splice(index,1);
+  delete(admin: Admin): void {
+    this.adminlist.forEach((item, index) => {
+      if (item === admin) {
+        this.adminlist.splice(index, 1);
       }
     });
-}
+  }
 
-save_1(){
-  const temp :Superadmin={...this.super_admin}
-  this.Superadmin_list.unshift(temp)
- }
+  save_1() {
+    const temp: Superadmin = { ...this.super_admin }
+    this.superadmin_list.unshift(temp)
+  }
 
- delete_1(super_admin:Superadmin):void{
-   this.Superadmin_list.forEach((item,index)=>{
-     if(item===super_admin){
-       this.Superadmin_list.splice(index,1);
-     }
-   });
-}
+  delete_1(super_admin: Superadmin): void {
+    this.superadmin_list.forEach((item, index) => {
+      if (item === super_admin) {
+        this.superadmin_list.splice(index, 1);
+      }
+    });
+  }
 }

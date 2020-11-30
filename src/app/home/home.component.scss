@@ -1,5 +1,7 @@
+$theme_pink: #D92756;
+
 * {
-outline-style: none;
+  outline-style: none;
 }
 
 //Header//
@@ -50,7 +52,7 @@ outline-style: none;
   width: 44px;
   height: 44px;
   border-width: 2px;
-  border: 2px solid #D92756;
+  border: 2px solid $theme_pink;
 
 }
 
@@ -115,7 +117,7 @@ h1 {
   width: 220px;
   height: 45px;
   border-radius: 30px;
-  background-color: #D92756;
+  background-color: $theme_pink;
   margin-top: 20px;
   border: none;
   fill: solid;
@@ -123,7 +125,7 @@ h1 {
   margin-left: 10px;
   font-size: 14px;
   font-family: Roboto;
-  box-shadow: 0 0 4px 0 #D92756;
+  box-shadow: 0 0 4px 0 $theme_pink;
 
 }
 
@@ -345,6 +347,7 @@ h1 {
   color: rgba(0, 0, 0, 0.38);
   float: left;
   margin-top: 30px;
+  margin-left: 10px;
 }
 
 .input_date {
@@ -356,8 +359,32 @@ h1 {
   float: left;
   margin-bottom: 30px;
   margin-left: 10px;
+
   font-family: Roboto;
   display: center;
+
+
+}
+
+.date_picker {
+
+  width: 185px;
+  border: none;
+  color: black;
+  font-size: 16px;
+  float: left;
+  margin-bottom: 30px;
+  margin-left: 8px;
+  margin-top: 32px;
+  font-family: Roboto;
+  display: center;
+  height: 50px;
+  border-color: black;
+  outline-color: black;
+
+  :hover {
+    outline-color: none;
+  }
 
 
 }
@@ -400,7 +427,7 @@ h1 {
 }
 
 .vertical-line {
-  border-left: 2px solid #D92756;
+  border-left: 2px solid $theme_pink;
   border-radius: 1px;
   height: 350px;
   width: 2px;
@@ -408,6 +435,9 @@ h1 {
   position: relative;
   margin-left: 15px;
   margin-right: 20px;
+}
+.date {
+  color: $theme_pink;
 }
 
 .button_save {
@@ -420,30 +450,35 @@ h1 {
   border: none;
   margin-bottom: 25px;
   border-radius: 10px;
-  color: #D92756;
+  color: $theme_pink;
   font-family: Roboto;
   font-weight: 500;
   margin-left: 10px;
-  
-
-
 }
+
+.save_icon {
+
+  float: left;
+  margin-left: 8px;
+  margin-top: 5px;
+}
+
+.save_text {
+  float: left;
+  margin-top: 12px;
+  margin-left: 5px;
+}
+
 
 .cloud {
-  color: #D92756;
+  color: $theme_pink;
 }
-
-.date {
-  color: #D92756;
-
-}
-
 
 .button_add {
 
   height: 40px;
   width: 40px;
-  background-color: #D92756;
+  background-color: $theme_pink;
   color: #FFFFFF;
   border-radius: 100%;
   margin-top: 480px;
@@ -460,9 +495,6 @@ h1 {
   width: 1440px;
   background-color: rgba(0, 0, 0, 0.02);
   bottom: 0;
-
-
-
 
   .robosoft-copyright {
     height: 24px;
@@ -490,7 +522,7 @@ h1 {
 //options//
 
 .options {
-  
+
   position: absolute;
   z-index: 2;
   margin-top: 839px;
@@ -500,37 +532,38 @@ h1 {
 
 }
 
-@mixin size{
+@mixin size {
   width: 194px;
   height: 33px;
   border-radius: 20px;
   background-color: #FDF4F6;
-  color:#D92756;
+  color: $theme_pink;
   font-family: Roboto;
   font-size: 9.8px;
   font-weight: 500;
   letter-spacing: 0.88px;
   line-height: 11.2px;
   text-align: center;
-  margin:10px ;
+  margin: 10px;
 }
 
 
-.option_change_password{
+.option_change_password {
   @include size();
 
 }
 
-.option_admin{
+.option_admin {
   @include size();
 
 }
 
-.option_superadmin{
+.option_superadmin {
   @include size();
 
 }
-.back{
+
+.back {
   font-size: 16px;
   margin-left: 155px;
 }
@@ -546,6 +579,7 @@ h1 {
   z-index: 3;
   position: absolute;
 }
+
 //white screen//
 
 .white_screen {
@@ -559,53 +593,56 @@ h1 {
 
 //Super Admin and admin//
 
-@mixin border{
+@mixin border {
   width: 198px;
-  height:50px;
-  border-radius:4px;
+  height: 50px;
+  border-radius: 4px;
   border-width: 1px;
   border-color: #9E9E9E;
   float: left;
   border-style: groove;
   text-align: center;
-  padding-top:15px;
-  color: rgba(0,0,0,0.6);
+  padding-top: 15px;
+  color: rgba(0, 0, 0, 0.6);
   font-family: Roboto;
   font-size: 16px;
   letter-spacing: 0.15px;
   line-height: 24px;
-  padding-left:8px;
-  
+  padding-left: 8px;
+
 
 }
-.border_1{
+
+.border_1 {
   @include border();
   margin-left: 30px;
   margin-top: 20px;
 
 }
-.border_2{
+
+.border_2 {
   @include border();
-  margin-left:50px;
+  margin-left: 50px;
   margin-top: 20px;
 }
-.border_3{
-  height:50px;
-  width:300px;
-  border-radius:4px;
+
+.border_3 {
+  height: 50px;
+  width: 300px;
+  border-radius: 4px;
   border-width: 1px;
   border-color: #9E9E9E;
   float: left;
   border-style: groove;
   margin-top: 20px;
   margin-left: 50px;
-  color: rgba(0,0,0,0.6);
+  color: rgba(0, 0, 0, 0.6);
   font-family: Roboto;
   font-size: 16px;
   letter-spacing: 0.15px;
   line-height: 24px;
-  padding-top:15px;
-  padding-left:8px;
+  padding-top: 15px;
+  padding-left: 8px;
 }
 
 
@@ -653,12 +690,14 @@ h1 {
   line-height: 24px;
   border-width: 1px;
 }
-.admin_button{
 
-  margin-top:30px;
+.admin_button {
+
+  margin-top: 30px;
   margin-left: 20px;
 }
-.row{
+
+.row {
 
   margin-top: 10px;
 }
@@ -667,7 +706,7 @@ button {
   border-radius: 60%;
   height: 51px;
   width: 51px;
-  background-color: #D92756;
+  background-color: $theme_pink;
   color: white;
   border: none;
   margin-left: 10px;
@@ -695,13 +734,13 @@ hr {
   margin-left: 0;
   border-style: dashed;
   color: #A2A2A2;
-  
+
 }
 
-@mixin super_admin{
+@mixin super_admin {
   width: 129px;
   height: 49px;
-  background-color: #D92756;
+  background-color: $theme_pink;
   color: white;
   border-radius: 30px;
   border: none;
@@ -713,7 +752,7 @@ hr {
 
 .update_super_admin {
 
- @include super_admin();
+  @include super_admin();
   margin-left: 500px;
   margin-top: 30px;
   float: left;
@@ -732,7 +771,7 @@ hr {
 
 .cancel {
   margin-left: 985px;
-  color:gray;
+  color: gray;
   font-size: 32px;
   line-height: 2px;
 }

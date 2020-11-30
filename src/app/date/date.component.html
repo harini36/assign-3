@@ -1,0 +1,7 @@
+<p>date works!</p>
+<mat-form-field class="input_date" >
+    <mat-label>Select start date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker></mat-datepicker>
+  </mat-form-field>

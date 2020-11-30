@@ -8,12 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './login/login.component';
 import { MatInputModule } from '@angular/material/input';
-import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
-import { ChangePasswordComponent } from './change-password/change-password.component';
+
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule} from '@angular/material/core';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AuthGuard } from './guards/auth.guard';
-
+import { DateComponent } from './date/date.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 @NgModule({
@@ -21,8 +23,9 @@ import { AuthGuard } from './guards/auth.guard';
     AppComponent,
     HomeComponent,
     LoginComponent,
+    DateComponent, 
+    ChangePasswordComponent,
     ForgotpasswordComponent,
-    ChangePasswordComponent
 
   ],
   imports: [
@@ -31,8 +34,10 @@ import { AuthGuard } from './guards/auth.guard';
     MatIconModule,
     MatInputModule,
     BrowserAnimationsModule,
-    MatDatepickerModule,
     FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    
 
 
   ],
